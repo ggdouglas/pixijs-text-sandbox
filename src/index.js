@@ -34,33 +34,19 @@ textarea.addEventListener('input', (event) => {
   text.setText(event.target.value);
 });
 
-const horizontalAlignButtons = document.querySelectorAll('[data-align^="h"]');
-const verticalAlignButtons = document.querySelectorAll('[data-align^="v"]');
+const alignmentButtons = document.querySelectorAll('.cell');
 
-horizontalAlignButtons.forEach((element) => {
+alignmentButtons.forEach((element) => {
   element.addEventListener('click', (event) => {
     const { target } = event;
-    const horizontal = target.dataset.align.split('-')[1];
+    const { horizontal, vertical } = target.dataset;
 
     text.setHorizontalAlignment(horizontal);
-
-    horizontalAlignButtons.forEach((element) => {
-      element.classList.remove('alignment-button--active');
-    });
-    target.classList.add('alignment-button--active');
-  });
-});
-
-verticalAlignButtons.forEach((element) => {
-  element.addEventListener('click', (event) => {
-    const { target } = event;
-    const vertical = event.target.dataset.align.split('-')[1];
-
     text.setVerticallignment(vertical);
 
-    verticalAlignButtons.forEach((element) => {
-      element.classList.remove('alignment-button--active');
+    alignmentButtons.forEach((element) => {
+      element.classList.remove('cell--active');
     });
-    target.classList.add('alignment-button--active');
+    target.classList.add('cell--active');
   });
 });
