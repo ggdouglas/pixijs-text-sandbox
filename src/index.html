@@ -8,10 +8,20 @@
     <title>Hello Pixi</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
     <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <nav class="sidebar">
+      <button class="btn" data-ratio="16:9">16:9</button>
+      <button class="btn" data-ratio="9:16">9:16</button>
+      <button class="btn" data-ratio="1:1">1:1</button>
+      <input class="range" type="range" min="12" max="100" value="26" />
+    </nav>
+    <main class="main">
+      <canvas id="canvas"></canvas>
+    </main>
     <script src="./index.js"></script>
   </body>
 </html>
