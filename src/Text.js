@@ -17,6 +17,12 @@ export default class Text {
     this.text.y = app.screen.height / 2;
   }
 
+  setText(string) {
+    this.text.text = string;
+    this.string = string;
+    this.updateText();
+  }
+
   getText() {
     return this.text;
   }
@@ -41,5 +47,6 @@ export default class Text {
     this.text.x = this.app.screen.width / 2;
     this.text.y = this.app.screen.height / 2;
     this.text.style.wordWrapWidth = this.app.screen.width;
+    this.updateText();
   }
 }
