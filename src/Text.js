@@ -32,7 +32,7 @@ export default class Text {
     const maxLines = Math.floor(
       this.app.screen.height / textMetrics.lineHeight
     );
-    this.text.text = take(textMetrics.lines, maxLines).join(' ');
+    this.text.text = take(textMetrics.lines, maxLines).join('\n');
   }
 
   setFontSize(fontSize) {
