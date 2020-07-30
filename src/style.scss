@@ -42,20 +42,25 @@ body {
   background-color: #343a40;
   border-color: #343a40;
   margin: 4px;
-}
 
-.btn:hover {
-  background-color: #23272b;
-  border-color: #1d2124;
-}
+  &:focus,
+  &:hover {
+    background-color: #23272b;
+    border-color: #1d2124;
+  }
 
-.btn:focus {
-  outline: 0;
-  background-color: #23272b;
-  border-color: #1d2124;
-  box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5);
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5);
+  }
 }
 
 .range {
   margin: 4px;
+}
+
+.github-link {
+  position: absolute;
+  top: 16px;
+  right: 16px;
 }
